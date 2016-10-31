@@ -1,7 +1,5 @@
 #[mean stack starter]
 
-#====================================================
-
 # INSTALL
 
 $ npm install
