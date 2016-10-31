@@ -1,0 +1,18 @@
+html
+    head
+        title MEAN Stack
+        link(href="/css/main.css", rel="stylesheet")
+        link(href="lib/bootstrap/dist/css/bootstrap.css", rel="stylesheet")
+        link(href="lib/bootstrap/dist/css/bootstrap-theme.css", rel="stylesheet")
+        script(src="/lib/angular/angular.min.js" type="text/javascript")
+        script(src="/app.js" type="text/javascript")
+        script(src="/lib/jquery/dist/jquery.min.js" type="text/javascript")
+        script(src="/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
+    body
+        div(ng-app="MyApp" ng-controller="MainController")
+            include header
+            div.layout
+                include layout
+
+
+

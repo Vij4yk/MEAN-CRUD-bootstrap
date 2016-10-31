@@ -1,0 +1,42 @@
+div.container
+    h2 User
+    form(method="POST" action="/api/user")
+        div.row
+            div.col-lg-6
+                    input(type="text" name="name" placeholder="Firstname" aria-describedby="basic-addon1").form-control
+            div.col-lg-6
+                    input(type="text" name="lastname" placeholder="Lastname" aria-describedby="basic-addon1").form-control
+        br
+        div.row
+            div.col-lg-6
+                    input(type="email" name="email" placeholder="E-mail" aria-describedby="basic-addon1").form-control
+            div.col-lg-6
+                    input(type="text" name="tel" placeholder="tel" aria-describedby="basic-addon1").form-control
+        br
+        div.row
+            div.col-lg-1
+                    button.btn.btn-default.dropdown-toggle Save 
+        br
+        hr
+    h2 User Data
+    br
+    div.table-responsive
+        table.table
+            thead
+                tr 
+                    th Firstname
+                    th Lastname
+                    th E-mail
+                    th Tel
+                tr 
+            thead 
+            tbody 
+                tr(ng-repeat="user in user") 
+                    td {{user.name}}
+                    td {{user.lastname}}
+                    td {{user.email}}
+                    td {{user.tel}}
+                tr 
+            tbody 
+        table 
+        div 
