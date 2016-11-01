@@ -41,8 +41,23 @@ div.container
             tbody 
                 tr(ng-repeat="user in user") 
                     td
-                        img(src="{{baseURL}}image/{{user.image}}", alt="image").image-80
-                    td.text-vertically-center {{user.name}}
-                    td.text-vertically-center {{user.lastname}}
-                    td.text-vertically-center {{user.email}}
-                    td.text-vertically-center {{user.tel}}
+                        img(src="{{baseURL}}image/{{user.image}}", alt="image").image-50
+                    td.text-vertically-center(ng-show="user._id != binding._id") {{user.name}}
+                    td.text-vertically-center(ng-show="user._id != binding._id") {{user.lastname}}
+                    td.text-vertically-center(ng-show="user._id != binding._id") {{user.email}}
+                    td.text-vertically-center(ng-show="user._id != binding._id") {{user.tel}}
+                    
+                    td.text-vertically-center(ng-show="status && user._id == binding._id") 
+                        input(type="text" ng-model="binding.name")
+                    td.text-vertically-center(ng-show="status && user._id == binding._id") 
+                        input(type="text" ng-model="binding.lastname")
+                    td.text-vertically-center(ng-show="status && user._id == binding._id") 
+                        input(type="text" ng-model="binding.email")
+                    td.text-vertically-center(ng-show="status && user._id == binding._id") 
+                        input(type="text" ng-model="binding.tel")
+                    td
+                        button.btn.btn-primary.margin-top-15(ng-click="edit(user)" ng-show="user._id != binding._id") Edit
+                        button.btn.btn-success.margin-top-15(ng-click="editSave(binding)" ng-show="status && user._id == binding._id") Save
+                    td
+                        button.btn.btn-danger.margin-top-15(ng-click="delete(user._id)") Delete 
+

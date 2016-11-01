@@ -1,9 +1,8 @@
 'use strict'
 
-let mongoose = require("../../configs/mongoose");
-let db = mongoose();
+let db = require('mongoose');
 let ctrl = require('../controllers/upload.controller')
-let users = require('mongoose').model('user');
+let users = db.model('user');
 let conn = db.connection;
 let gfs;
 var fs = require("fs");
