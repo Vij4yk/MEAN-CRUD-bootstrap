@@ -6,7 +6,5 @@ module.exports = function (app) {
 
     app.route("/")
         .get(ctrl.getRoute)
-    app.route("/")
         .post(ctrl.postRoute);
-
 }

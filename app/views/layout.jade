@@ -1,6 +1,7 @@
 div.container
     h2 User
-    form(method="POST" action="/api/user")
+    hr
+    form(action="/api/user" method="POST" enctype="multipart/form-data")
         div.row
             div.col-lg-6
                     input(type="text" name="name" placeholder="Firstname" aria-describedby="basic-addon1").form-control
@@ -14,29 +15,32 @@ div.container
                     input(type="text" name="tel" placeholder="tel" aria-describedby="basic-addon1").form-control
         br
         div.row
+            div.col-lg-3
+                input(type="file" name="file" id="files")
+                br
+                img(id="image", alt="").image-80
+        br
+        div.row
             div.col-lg-1
                     button.btn.btn-default.dropdown-toggle Save 
         br
         hr
-    h2 User Data
+    h2 User Data 
     br
     div.table-responsive
         table.table
             thead
                 tr 
+                    th
                     th Firstname
                     th Lastname
                     th E-mail
                     th Tel
-                tr 
-            thead 
             tbody 
                 tr(ng-repeat="user in user") 
-                    td {{user.name}}
-                    td {{user.lastname}}
-                    td {{user.email}}
-                    td {{user.tel}}
-                tr 
-            tbody 
-        table 
-        div 
+                    td
+                        img(src="http://localhost:2020/image/{{user.image}}", alt="image").image-80
+                    td.text-vertically-center {{user.name}}
+                    td.text-vertically-center {{user.lastname}}
+                    td.text-vertically-center {{user.email}}
+                    td.text-vertically-center {{user.tel}}

@@ -7,8 +7,15 @@ h1 {
 .layout{
     padding-top: 60px;
 }
-
-
+.image-80{
+  width: 80px;
+  height: 80px;
+}
+.text-vertically-center {
+    /* text-align: start; */
+    height: 90px;
+    line-height: 90px !important;
+}
 
 
 /* navbar-custom */

@@ -18,7 +18,7 @@ module.exports = function () {
 
     require('../app/routes/index.route')(app);
     require('../app/routes/user.route')(app);
-
+    require('../app/routes/upload.route')(app);
     app.use(express.static('./public'));
 
     return app;

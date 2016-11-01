@@ -4,7 +4,7 @@ let users = require('mongoose').model('user');
 
 exports.getRoute = function (req, res, next) {
 
-    res.render('index');
+    res.render('index', { image: req.image });
 
 }
 
