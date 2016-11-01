@@ -4,17 +4,17 @@ div.container
     form(action="/api/user" method="POST" enctype="multipart/form-data")
         div.row
             div.col-lg-6
-                    input(type="text" name="name" placeholder="Firstname" aria-describedby="basic-addon1").form-control
-                    br
+                input(type="text" name="name" placeholder="Firstname" aria-describedby="basic-addon1").form-control
+                br
             div.col-lg-6
-                    input(type="text" name="lastname" placeholder="Lastname" aria-describedby="basic-addon1").form-control
+                input(type="text" name="lastname" placeholder="Lastname" aria-describedby="basic-addon1").form-control
         br
         div.row
             div.col-lg-6
-                    input(type="email" name="email" placeholder="E-mail" aria-describedby="basic-addon1").form-control
-                    br
+                input(type="email" name="email" placeholder="E-mail" aria-describedby="basic-addon1").form-control
+                br
             div.col-lg-6
-                    input(type="text" name="tel" placeholder="tel" aria-describedby="basic-addon1").form-control
+                input(type="text" name="tel" placeholder="tel" aria-describedby="basic-addon1").form-control
         br
         div.row
             div.col-lg-3
@@ -41,7 +41,7 @@ div.container
             tbody 
                 tr(ng-repeat="user in user") 
                     td
-                        img(src="http://localhost:2020/image/{{user.image}}", alt="image").image-80
+                        img(src="{{baseURL}}/image/{{user.image}}", alt="image").image-80
                     td.text-vertically-center {{user.name}}
                     td.text-vertically-center {{user.lastname}}
                     td.text-vertically-center {{user.email}}

@@ -4,6 +4,8 @@ let appModule = angular.module(MyApp, []);
 
 appModule.controller('MainController', ['$scope', '$http', ($scope, $http) => {
 
+    $scope.baseURL = 'https://secretmeanstack.herokuapp.com/';
+    // http://localhost:2020/
     document.getElementById("image").src = './img/no_image.png'
     $scope.user = {};
 
