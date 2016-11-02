@@ -1,0 +1,24 @@
+link(href="/css/login.css", rel="stylesheet")
+
+.container(ng-app="MyApp" ng-controller="MainController")
+    .row
+        .container
+            .card
+            .card
+                h1.title Login
+                form(action="/login" method="POST")
+                    .input-container
+                        input#Username(type='text', required='required')
+                        label(for='Username') Username
+                        .bar
+                    .input-container
+                        input#Password(type='password', required='required')
+                        label(for='Password') Password
+                        .bar
+                    .button-container
+                        button
+                            span Go
+                    .footer
+                        a Forgot your password?
+
+                            
