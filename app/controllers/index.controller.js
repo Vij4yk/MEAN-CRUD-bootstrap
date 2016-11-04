@@ -9,7 +9,7 @@ exports.postRoute = function (req, res, next) {
     res.render('index');
 }
 exports.login = function (req, res, next) {
-    res.redirect('/#/');
+    res.render('index');
 }
 exports.renderLogin = function (req, res, next) {
     res.render('login');

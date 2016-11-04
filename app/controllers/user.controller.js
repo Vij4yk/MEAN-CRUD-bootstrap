@@ -17,7 +17,7 @@ exports.createUser = function (req, res, next) {
             console.log(err);
         } else {
             // res.json(user);
-            res.redirect('/#/');
+            res.redirect('/#/home');
         }
     })
 }

@@ -32,7 +32,7 @@ module.exports = function (app) {
                                 console.log(err);
                             } else {
                                 // res.json(user);
-                                res.redirect('/#/');
+                                res.redirect('/#/home');
                             }
                         })
                     })

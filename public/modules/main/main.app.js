@@ -7,7 +7,7 @@ mainApp.config(['$stateProvider', function ($stateProvider) {
 
     $stateProvider
         .state('mainPage', {
-            url: '/',
+            url: '',
             templateUrl: '/modules/main/views/layout.jade'
         })
 
